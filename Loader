@@ -1,2 +1,2 @@
-loadstring(game:HttpGet(""))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/rvzdxkngjz-png/Scripts/refs/heads/main/BloxFruit.lua?token=GHSAT0AAAAAAD2FKICR5FAUH52G4HGGNSDE2PM7JEA"))()
 
