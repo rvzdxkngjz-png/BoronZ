@@ -1,4 +1,4 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/rvzdxkngjz-png/Scripts/refs/heads/main/BloxFruit.lua?token=GHSAT0AAAAAAD2FKICR5FAUH52G4HGGNSDE2PM7JEA"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/rvzdxkngjz-png/BoronZ/refs/heads/main/BloxFruit.lia"))()
 
 local PLACE_SCRIPTS = {
     -- Add your games here: [PlaceId] = "loadstring or raw script",
