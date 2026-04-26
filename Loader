@@ -1,2 +1,79 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/rvzdxkngjz-png/Scripts/refs/heads/main/BloxFruit.lua?token=GHSAT0AAAAAAD2FKICR5FAUH52G4HGGNSDE2PM7JEA"))()
 
+local PLACE_SCRIPTS = {
+    -- Add your games here: [PlaceId] = "loadstring or raw script",
+    
+    [18680867089] = "loadstring(game:HttpGet("https://raw.githubusercontent.com/rvzdxkngjz-png/umt/refs/heads/main/QuiltX"))()", 
+    [2753915549] = "loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Nubla-X-138734"))()",
+    [286090429] = "loadstring(game:HttpGet("https://raw.githubusercontent.com/EndOverdosing/Soluna-API/refs/heads/main/arsenal.lua",true))()",
+    
+    -- You can also put the full script directly (not recommended for long scripts):
+    -- [1234567890] = [[ print("Adopt Me script loaded!") ... your full code here ... ]],
+}
+
+-- Optional: Script to run for ANY game that doesn't match above
+local DEFAULT_SCRIPT = nil
+-- local DEFAULT_SCRIPT = "https://raw.githubusercontent.com/yourusername/scripts/main/universal.lua"
+
+-- =============================================
+--  Don't edit below unless you know what you're doing
+-- =============================================
+
+local HttpService = game:GetService("HttpService")
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+local currentPlaceId = game.PlaceId
+local alreadyExecuted = false
+
+local function loadScript(urlOrCode)
+    if not urlOrCode then return end
+    
+    local success, err = pcall(function()
+        if urlOrCode:find("http") then
+            -- It's a URL → load with HttpGet
+            local code = HttpService:GetAsync(urlOrCode)
+            loadstring(code)()
+        else
+            -- It's raw code
+            loadstring(urlOrCode)()
+        end
+    end)
+    
+    if success then
+        print("✅ Successfully loaded script for PlaceId: " .. currentPlaceId)
+    else
+        warn("❌ Failed to load script: " .. tostring(err))
+    end
+end
+
+-- Main detection
+print("🔍 Roblox Game Detector loaded | Current PlaceId: " .. currentPlaceId)
+
+if PLACE_SCRIPTS[currentPlaceId] then
+    print("🎮 Detected specific game! Loading dedicated script...")
+    loadScript(PLACE_SCRIPTS[currentPlaceId])
+    alreadyExecuted = true
+elseif DEFAULT_SCRIPT then
+    print("🎮 No specific script found. Loading default universal script...")
+    loadScript(DEFAULT_SCRIPT)
+    alreadyExecuted = true
+else
+    print("ℹ️  No script configured for this game (PlaceId: " .. currentPlaceId .. ")")
+end
+
+-- Optional: Also try by game name (less reliable but useful as backup)
+if not alreadyExecuted then
+    local success, info = pcall(function()
+        return game:GetService("MarketplaceService"):GetProductInfo(currentPlaceId)
+    end)
+    
+    if success and info then
+        local gameName = info.Name
+        print("Game Name: " .. gameName)
+        -- You could add name-based matching here if you want
+    end
+end
+
+-- Prevent re-execution if you re-execute the detector
+alreadyExecuted = true
