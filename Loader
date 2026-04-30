@@ -102,7 +102,7 @@ local gamesList = {
         bannerID = "121044225858097",
         script = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/rvzdxkngjz-png/BoronZ/refs/heads/main/bealuckyblock"))()',
         features = {"KeyLess","Autofarm", "Speed Multi", "", "More Etc.."},
-    },
+    
 }
 
 local selectedGame = gamesList[1] -- Default to first game
