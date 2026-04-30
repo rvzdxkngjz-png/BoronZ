@@ -45,7 +45,7 @@ local gamesList = {
         name = "Tha Bronx 3",
         bannerID = "121044225858097",
         script = 'loadstring(game:HttpGet("https://api.jnkie.com/api/v1/luascripts/public/6eef67b8a00bf6a619eafe171c8ab69653bb80d436a94cf79516daf7e3dfc24b/download"))()',
-        features = {"Key System""Auto Farm", "SilentAim/Aimbot", "Infinite Money", "ESP&More"},
+        features = {"Key System","Auto Farm", "SilentAim/Aimbot", "Infinite Money", "ESP&More"},
     },
     {
         id = 6,
