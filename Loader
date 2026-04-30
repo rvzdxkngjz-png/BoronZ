@@ -17,7 +17,7 @@ local gamesList = {
         name = "Universal+Info",
         bannerID = "121044225858097",
         script = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/rvzdxkngjz-png/BoronZ/refs/heads/main/universal.lua"))()',
-        features = {"Made By BoronZ", "Join the Discord", "", "Universal|Silentaim"},
+        features = {"Made By BoronZ", "Join the Discord", "https://discord.gg/SSEGfYDEe", "Universal|Silentaim"},
     },
     {
         id = 2,
