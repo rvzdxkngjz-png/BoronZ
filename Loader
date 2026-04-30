@@ -82,6 +82,27 @@ local gamesList = {
         script = 'loadstring(game:HttpGet("https://api.jnkie.com/api/v1/luascripts/public/6eef67b8a00bf6a619eafe171c8ab69653bb80d436a94cf79516daf7e3dfc24b/download"))()',
         features = {"Key System","SilentAim", "Aimbot", "Esp", "More"},
     },
+    {
+        id = 11,
+        name = "Rivals",
+        bannerID = "121044225858097",
+        script = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/rvzdxkngjz-png/BoronZ/refs/heads/main/Rivals"))()',
+        features = {"KeyLess","SilentAim", "Aimbot", "Esp", "More"},
+    },
+    {
+        id = 12,
+        name = "BloxFruit",
+        bannerID = "121044225858097",
+        script = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/rvzdxkngjz-png/BoronZ/refs/heads/main/BloxFruit.luau"))()',
+        features = {"KeyLess","Autofarm", "FruitEsp", "All seas etc", "More Etc.."},
+    }
+    {
+        id = 13,
+        name = "BeALuckyBlock",
+        bannerID = "121044225858097",
+        script = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/rvzdxkngjz-png/BoronZ/refs/heads/main/bealuckyblock"))()',
+        features = {"KeyLess","Autofarm", "Speed Multi", "", "More Etc.."},
+    }
 }
 
 local selectedGame = gamesList[1] -- Default to first game
