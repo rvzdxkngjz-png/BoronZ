@@ -105,7 +105,7 @@ local gamesList = {
     },
     {
         id = 14,
-        name = "MultiCrewTankCombat",
+        name = "MTC",
         bannerID = "95721658376580",
         script = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/rvzdxkngjz-png/BoronZ/refs/heads/main/mtc"))()',
         features = {"KeyLess","GunMods", "Silentaim", "InfTankammo", "More Etc.."},
