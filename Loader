@@ -103,6 +103,13 @@ local gamesList = {
         script = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/rvzdxkngjz-png/BoronZ/refs/heads/main/bealuckyblock"))()',
         features = {"KeyLess","Autofarm", "Speed Multi", ".", "More Etc.."},
     },
+    {
+        id = 14,
+        name = "MultiCrewTankCombat",
+        bannerID = "95721658376580",
+        script = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/rvzdxkngjz-png/BoronZ/refs/heads/main/mtc"))()',
+        features = {"KeyLess","GunMods", "Silentaim", "InfTankammo", "More Etc.."},
+    },
 }
 
 local selectedGame = gamesList[1] -- Default to first game
